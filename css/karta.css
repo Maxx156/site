@@ -1,0 +1,66 @@
+main {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  max-width: 40%;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 2vw;
+  margin-top: 5vw;
+  padding: 1.5vw;
+  box-shadow: 0 0 1vw #000000;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 1.5vw;
+}
+
+.site {
+  width: 10vw;
+  font-family: BlackOpsOne;
+  height: 7vw;
+  min-height: 5vw;
+  background-color: #ffffff;
+  display: flex;
+  border-radius: 1vw;
+  flex-direction: column;
+  padding: 1vw;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  transition: all 0.5s ease-in-out;
+  text-decoration: none;
+  color: #000000;
+  border: #000000 solid 0.15vw;
+}
+
+.site__name {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  font-size: 1vw;
+  margin: auto auto;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.site__text {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  font-size: 1.15vw;
+  margin: auto auto;
+}
+
+.site:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 1vw #ffffff;
+  background-color: #172958;
+  box-shadow: 0 0 1vw #172958;
+  color: #ffffff;
+}

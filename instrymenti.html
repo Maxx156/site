@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Инструменты</title>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/html.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/main__all.css" />
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/addtocart.js" defer></script>
+    <script src="js/on__top.js"></script>
+    <script src="js/counter.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+  </head>
+  <body>
+    <header style="background-color: #FFFFFF;">
+      <a href="index.html" id="logo">
+          <img src="img/logo.png" alt="" class="logo">
+      </a>
+      <a href="index.html">РусАвтоЗапчасти</a>
+      <a href="cart.html" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-decoration: none; color: black; font-size: 2.5vw; margin-left: 5vw; padding: 0.25vw; border: #000000 solid 0.15vw; border-radius: 1vw;"><img style="width: 2.5vw; margin-bottom: -0.3vw; margin-left: 0.25vw; margin-right: 0.25vw;" src="img/basket.png" alt=""></a>
+      <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; border: solid 0.15vw; width: min-content; height: 3.75vw; border-radius: 1vw; margin: 0 auto; gap: 0.25vw;
+      padding: 0 1vw;">
+          <img src="img/free-icon-eye-6200023.png" style="width: 2vw;" alt="">
+          <p id="counter" style="font-size: 2.5vw; font-family: BlackOpsOne;"></p>
+      </div>
+      
+      <div class="header__info">
+          <p>Интернет-магазин:</p>
+          <h2>+7 (903) 344-15-13</h2>
+          <p>часы работы с 9:00 до 22:00 (пн-пт)</p>
+      </div>
+  </header>
+    <main>
+      <div class="main__name">
+        <p id="main__name__text">Инструменты</p>
+      </div>
+      <div class="main__products">
+        <div class="main__card">
+          <div class="card__left">
+            <img class="card__img" src="img/instrymenti1.jpg" alt="" />
+            <p class="card__price">81,70 руб</p>
+            <div
+              onclick="addToCart('Адаптер оправка для кругов CD хвостовик 6мм GTOOL 50147', '81,70'); alert('Товар добавлен в корзину!')"
+              class="card__buy"
+            >
+              <p>Добавить в корзину</p>
+              <img src="img/order.png" alt="" />
+            </div>
+          </div>
+          <div class="card__right">
+            <p class="card__name">
+              Адаптер оправка для кругов CD хвостовик 6мм GTOOL 50147
+            </p>
+            <p class="card__text">
+              Зажимная оправка для крепления кругов Clean and Strip. Технические
+              характеристики: Хвостовик - 6 мм Общая длина - 59 мм<br><br>Остаток на складе: 500 шт.
+            </p>
+          </div>
+        </div>
+
+        <div class="main__card">
+          <div class="card__left">
+            <img class="card__img" src="img/instrymenti2.jpg" alt="" />
+            <p class="card__price">508,25 руб</p>
+            <div
+              onclick="addToCart('Адаптер переходник 1/4 - квадрат для механизированного инструмента 3пр Ombra 912003', '508,25'); alert('Товар добавлен в корзину!')"
+              class="card__buy"
+            >
+              <p>Добавить в корзину</p>
+              <img src="img/order.png" alt="" />
+            </div>
+          </div>
+          <div class="card__right">
+            <p class="card__name">
+              Адаптер переходник 1/4 - квадрат для механизированного инструмента
+              3пр Ombra 912003
+            </p>
+            <p class="card__text">
+              Набор адаптеров применяются в качестве переходников с
+              шестигранного привода 1/4HDR на квадратный привод SDR трех
+              присоединительных размеров 1/4DR, 3/8DR, 1/2DR для фиксации
+              торцевых насадок при использовании механизированных инструментов.<br><br>Остаток на складе: 500 шт.
+            </p>
+          </div>
+        </div>
+
+        <div class="main__card">
+          <div class="card__left">
+            <img class="card__img" src="img/instrymenti3.jpg" alt="" />
+            <p class="card__price">95,00 руб</p>
+            <div
+              onclick="addToCart('Адаптер переходник с гайки М14 для крепления на дрель Matrix 76290', '95,00'); alert('Товар добавлен в корзину!')"
+              class="card__buy"
+            >
+              <p>Добавить в корзину</p>
+              <img src="img/order.png" alt="" />
+            </div>
+          </div>
+          <div class="card__right">
+            <p class="card__name">
+              Адаптер переходник с гайки М14 для крепления на дрель Matrix 76290
+            </p>
+            <p class="card__text">
+              Адаптер-переходник с гайки М14 Matrix SDS PLUS 76290 позволяет
+              устанавливать на дрель насадки под шлифкруги с креплением
+              типоразмера М14. Он помогает выравнивать и полировать поверхности
+              из дерева, пластика и металла.<br><br>Остаток на складе: 500 шт.
+            </p>
+          </div>
+        </div>
+
+        <div class="main__card">
+          <div class="card__left">
+            <img class="card__img" src="img/instrymenti4.jpg" alt="" />
+            <p class="card__price">3353,50 руб</p>
+            <div
+              onclick="addToCart('Аккумулятор для электро инструмента B-18-2.0 Li-Ion 18В 2,0Ач Denzel 28435', '3353,50'); alert('Товар добавлен в корзину!')"
+              class="card__buy"
+            >
+              <p>Добавить в корзину</p>
+              <img src="img/order.png" alt="" />
+            </div>
+          </div>
+          <div class="card__right">
+            <p class="card__name">
+              Аккумулятор для электро инструмента B-18-2.0 Li-Ion 18В 2,0Ач
+              Denzel 28435
+            </p>
+            <p class="card__text">
+              Батарея Li-Ion Denzel B-18-2.0 28435 на 2,0 Ач, номинальным
+              напряжением 18 В, предназначена для обеспечения бесперебойной
+              работы аккумуляторного инструмента.<br><br>Остаток на складе: 500 шт.
+            </p>
+          </div>
+        </div>
+
+        <div class="main__card">
+          <div class="card__left">
+            <img class="card__img" src="img/instrymenti5.jpg" alt="" />
+            <p class="card__price">8312,50 руб</p>
+            <div
+              onclick="addToCart('Аккумулятор для электро инструмента B-18-6.0 Li-Ion 18В 6,0Ач Denzel 28436', '8312,50'); alert('Товар добавлен в корзину!')"
+              class="card__buy"
+            >
+              <p>Добавить в корзину</p>
+              <img src="img/order.png" alt="" />
+            </div>
+          </div>
+          <div class="card__right">
+            <p class="card__name">
+              Аккумулятор для электро инструмента B-18-6.0 Li-Ion 18В 6,0Ач
+              Denzel 28436
+            </p>
+            <p class="card__text">
+              Батарея Li-Ion Denzel B-18-6.0 28436 на 6,0 Ач, номинальным
+              напряжением 18 В, предназначена для обеспечения бесперебойной
+              работы аккумуляторного инструмента.<br><br>Остаток на складе: 500 шт.
+            </p>
+          </div>
+        </div>
+
+        <div class="main__card">
+          <div class="card__left">
+            <img class="card__img" src="img/instrymenti6.jpg" alt="" />
+            <p class="card__price">199,50 руб</p>
+            <div
+              onclick="addToCart('Ареометр Garde универсальный электролит+ тосол в пласт тубе с воронкой', '199,50'); alert('Товар добавлен в корзину!')"
+              class="card__buy"
+            >
+              <p>Добавить в корзину</p>
+              <img src="img/order.png" alt="" />
+            </div>
+          </div>
+          <div class="card__right">
+            <p class="card__name">
+              Ареометр Garde универсальный электролит+ тосол в пласт тубе с
+              воронкой
+            </p>
+            <p class="card__text">
+              Ареометр для электролита и тосола, который предназначен для
+              измерения плотности электролита в кислотных и щелочных
+              аккумуляторах и определения температуры замерзания тосола в
+              системе охлаждения двигателя автомобиля.<br><br>Остаток на складе: 500 шт.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+        <div id="on__top">
+            <img src="img/arrow.png" alt="">
+        </div>
+        <div class="footer__content">
+            <h1>Компания</h1>
+            <a href="rules.html">Партнерам (аренда, сотрудничество)</a>
+            <a href="rules.html#politika">Политика конфиденциальности</a>
+            <a href="rules.html#personal">Персональные данные</a>
+        </div>
+        <div class="footer__content">
+            <h1>Покупателям</h1>
+            <a href="rules.html#sposobi">Способы оплаты</a>
+            <a href="rules.html#dostavka">Доставка</a>
+            <a href="rules.html#obmen">Обмен, возврат, гарантия</a>
+        </div>
+        <div class="footer__content">
+            <h1>Юридическим лицам</h1>
+            <a href="rules.html#proverka">Проверка счета</a>
+            <a href="rules.html#svaz">Обратная связь</a>
+            <a href="karta.html">Карта сайта</a>
+        </div>
+        <div class="footer__content">
+            <h1>Контакты</h1>
+            <div class="footer__ss">
+                <a href="https://t.me/+mpO1ppCjLWM2OWQy" target="_blank"><img src="img/free-icon-telegram-2504941.png" alt=""></a>
+                <a href="https://vk.me/join/gzi/bYRgI41i5p3281lOpPqambCFXhz0QwA=" target="_blank"><img src="img/free-icon-vk-2504953.png" alt=""></a>
+                <a href="https://wa.me/+79055589003" target="_blank"><img src="img/free-icon-whatsapp-2504957.png" alt=""></a>             
+            </div>
+            <div>
+            <button id="colorToggleBtn">Версия для слабовидящих</button>
+
+                <script>
+                const button = document.getElementById('colorToggleBtn');
+                let isGreen = false;
+
+                button.addEventListener('click', () => {
+                    if (!isGreen) {
+                    document.body.style.color = '#17e621';
+                    isGreen = true;
+                    } else {
+                    document.body.style.color = '';
+                    isGreen = false;
+                    }
+                });
+            </script>
+        </div>
+        </div>
+        
+
+    </footer>
+  </body>
+</html>

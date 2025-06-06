@@ -1,0 +1,55 @@
+main {
+    width: 97.5%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.250);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3.5vw;
+    border-radius: 2vw;
+    border: dashed #FFFFFF 0.25vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 2.5vw;
+}
+
+.main__name {
+    font-family: "BlackOpsOne";
+    color: #000000;
+    background-color: #ffffff;
+    max-height: min-content;
+    padding: 1vw 1vw 1vw 1vw;
+    font-size: 2.5vw;
+    margin-top: 1.5vw;
+    border-radius: 1.5vw;
+    text-align: center;
+}
+
+.content__name {
+    background-color: hsla(0, 0%, 0%, 0.75);
+    color: #FFFFFF;
+    font-size: 2.5vw;
+    text-align: center;
+    width: 60%;
+    padding: 1vw;
+    border-radius: 0 0 1vw 1vw;
+    height: min-content;
+}
+
+.content__text {
+    margin-top: 2.5vw;
+    width: 80%;
+    font-size: 1.5vw;
+}
+
+#content {
+    margin-top: 3.5vw;
+    width: 80%;
+    height: auto;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    border-radius: 2vw;
+    flex-direction: column;
+}

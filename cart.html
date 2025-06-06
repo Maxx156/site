@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Корзина</title>
+    <link rel="stylesheet" href="css/html.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+    <script src="js/on__top.js"></script>
+    <script defer src="js/addtocart.js"></script>
+    <script src="js/counter.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+  </head>
+  <body>
+    <header style="background-color: #ffffff">
+      <a href="index.html" id="logo">
+        <img src="img/logo.png" alt="" class="logo" />
+      </a>
+      <a href="index.html">РусАвтоЗапчасти</a>
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          border: solid 0.15vw;
+          width: min-content;
+          height: 3.75vw;
+          border-radius: 1vw;
+          margin: 0 auto;
+          gap: 0.25vw;
+          padding: 0 1vw;
+        "
+      >
+        <img src="img/free-icon-eye-6200023.png" style="width: 2vw" alt="" />
+        <p id="counter" style="font-size: 2.5vw; font-family: BlackOpsOne"></p>
+      </div>
+
+      <div class="header__info">
+        <p>Интернет-магазин:</p>
+        <h2>+7 (903) 344-15-13</h2>
+        <p>часы работы с 9:00 до 22:00 (пн-пт)</p>
+      </div>
+    </header>
+    <main>
+      <div
+        class="main__name"
+        style="
+          display: flex;
+          margin-left: auto;
+          margin-right: auto;
+          background-color: #ffffff;
+          width: 50%;
+          margin-top: 3.5%;
+          border-radius: 1.5vw;
+          height: auto;
+          justify-content: center;
+          align-items: center;
+          font-size: 2vw;
+          font-family: BlackOpsOne;
+          margin-bottom: 3.5%;
+        "
+      >
+        <p id="main__name__text" style="margin-top: 1%; margin-bottom: 1%">
+          Корзина
+        </p>
+      </div>
+
+      <div
+        class="buy"
+        onclick="clearCart()"
+        style="
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          margin-bottom: 3.5%;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+            sans-serif;
+          font-size: 1vw;
+          background-color: #ffffff;
+          width: 10%;
+          margin-left: auto;
+          margin-right: auto;
+          height: 2vw;
+          align-content: center;
+          align-items: center;
+          border-radius: 0.75vw;
+          margin-top: -1.5vw;
+        "
+      >
+        Очистить корзину
+      </div>
+
+      <div class="main__products" id="cart"></div>
+      <div
+        onclick="alert('Ваш заказ принят! Скоро с вами свяжется наш специалист.')"
+        class="buy__button"
+      >
+        Заказать
+      </div>
+    </main>
+    <footer>
+      <div id="on__top">
+        <img src="img/arrow.png" alt="" />
+      </div>
+      <div class="footer__content">
+        <h1>Компания</h1>
+        <a href="rules.html">Партнерам (аренда, сотрудничество)</a>
+        <a href="rules.html#politika">Политика конфиденциальности</a>
+        <a href="rules.html#personal">Персональные данные</a>
+      </div>
+      <div class="footer__content">
+        <h1>Покупателям</h1>
+        <a href="rules.html#sposobi">Способы оплаты</a>
+        <a href="rules.html#dostavka">Доставка</a>
+        <a href="rules.html#obmen">Обмен, возврат, гарантия</a>
+      </div>
+      <div class="footer__content">
+        <h1>Юридическим лицам</h1>
+        <a href="rules.html#proverka">Проверка счета</a>
+        <a href="rules.html#svaz">Обратная связь</a>
+        <a href="karta.html">Карта сайта</a>
+      </div>
+      <div class="footer__content">
+        <h1>Контакты</h1>
+        <div class="footer__ss">
+          <a href="https://t.me/+mpO1ppCjLWM2OWQy" target="_blank"
+            ><img src="img/free-icon-telegram-2504941.png" alt=""
+          /></a>
+          <a
+            href="https://vk.me/join/gzi/bYRgI41i5p3281lOpPqambCFXhz0QwA="
+            target="_blank"
+            ><img src="img/free-icon-vk-2504953.png" alt=""
+          /></a>
+          <a href="https://wa.me/+79055589003" target="_blank"
+            ><img src="img/free-icon-whatsapp-2504957.png" alt=""
+          /></a>
+        </div>
+        <div>
+          <button id="colorToggleBtn">Версия для слабовидящих</button>
+
+          <script>
+            const button = document.getElementById("colorToggleBtn");
+            let isGreen = false;
+
+            button.addEventListener("click", () => {
+              if (!isGreen) {
+                document.body.style.color = "#17e621";
+                isGreen = true;
+              } else {
+                document.body.style.color = "";
+                isGreen = false;
+              }
+            });
+          </script>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

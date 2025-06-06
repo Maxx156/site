@@ -1,0 +1,17 @@
+header {
+    background-color: #FFFFFF;
+    height: 20vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    border-bottom-left-radius: 7.5vw;
+    border-bottom-right-radius: 7.5vw;
+    align-items: center;
+    align-content: center;
+}
+
+.header__name {
+    font-family: "BlackOpsOne";
+    font-size: 4vw;
+}

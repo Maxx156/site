@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Зарядные устройства</title>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/html.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/main__all.css" />
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/addtocart.js" defer></script>
+    <script src="js/on__top.js"></script>
+    <script src="js/counter.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+  </head>
+  <body>
+    <header style="background-color: #FFFFFF;">
+      <a href="index.html" id="logo">
+          <img src="img/logo.png" alt="" class="logo">
+      </a>
+      <a href="index.html">РусАвтоЗапчасти</a>
+      <a href="cart.html" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-decoration: none; color: black; font-size: 2.5vw; margin-left: 5vw; padding: 0.25vw; border: #000000 solid 0.15vw; border-radius: 1vw;"><img style="width: 2.5vw; margin-bottom: -0.3vw; margin-left: 0.25vw; margin-right: 0.25vw;" src="img/basket.png" alt=""></a>
+      <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; border: solid 0.15vw; width: min-content; height: 3.75vw; border-radius: 1vw; margin: 0 auto; gap: 0.25vw;
+      padding: 0 1vw;">
+          <img src="img/free-icon-eye-6200023.png" style="width: 2vw;" alt="">
+          <p id="counter" style="font-size: 2.5vw; font-family: BlackOpsOne;"></p>
+      </div>
+      
+      <div class="header__info">
+          <p>Интернет-магазин:</p>
+          <h2>+7 (903) 344-15-13</h2>
+          <p>часы работы с 9:00 до 22:00 (пн-пт)</p>
+      </div>
+  </header>
+    <main>
+      <div class="main__name">
+        <p id="main__name__text">Зарядные устройства</p>
+      </div>
+      <div class="main__products">
+        <div class="main__card">
+          <div class="card__left">
+            <img class="card__img" src="img/zarydki1.jpg" alt="" />
+            <p class="card__price">3410,50 руб</p>
+            <div
+              onclick="addToCart('Зарядное устройство AIRLINE 10А импульсное ACH-10A-07', '3410,50'); alert('Товар добавлен в корзину!')"
+              class="card__buy"
+            >
+              <p>Добавить в корзину</p>
+              <img src="img/order.png" alt="" />
+            </div>
+          </div>
+          <div class="card__right">
+            <p class="card__name">
+              Зарядное устройство AIRLINE 10А импульсное ACH-10A-07
+            </p>
+            <p class="card__text">
+              Импульсное зарядное устройство для зарядки свинцово-кислотных АКБ
+              номинальным напряжением 6/12В с возможностью ограничения
+              максимального тока зарядки.<br><br>Остаток на складе: 500 шт.
+            </p>
+          </div>
+        </div>
+
+        <div class="main__card">
+          <div class="card__left">
+            <img class="card__img" src="img/zarydki2.jpg" alt="" />
+            <p class="card__price">2783,50 руб</p>
+            <div
+              onclick="addToCart('Зарядное устройство AIRLINE 10А импульсное ACH-AM-18', '2783,50'); alert('Товар добавлен в корзину!')"
+              class="card__buy"
+            >
+              <p>Добавить в корзину</p>
+              <img src="img/order.png" alt="" />
+            </div>
+          </div>
+          <div class="card__right">
+            <p class="card__name">
+              Зарядное устройство AIRLINE 10А импульсное ACH-AM-18
+            </p>
+            <p class="card__text">
+              Автоматическое импульсное зарядное устройство для
+              свинцово-кислотных аккумуляторов с номинальным напряжением 12В с
+              возможностью регулировки зарядного тока обеспечивает заряд до
+              напряжения 14,5В.<br><br>Остаток на складе: 500 шт.
+            </p>
+          </div>
+        </div>
+
+        <div class="main__card">
+          <div class="card__left">
+            <img class="card__img" src="img/zarydki3.jpg" alt="" />
+            <p class="card__price">3325,00 руб</p>
+            <div
+              onclick="addToCart('Зарядное устройство AIRLINE 12А импульсное ACH-12A-14', '3325,00'); alert('Товар добавлен в корзину!')"
+              class="card__buy"
+            >
+              <p>Добавить в корзину</p>
+              <img src="img/order.png" alt="" />
+            </div>
+          </div>
+          <div class="card__right">
+            <p class="card__name">
+              Зарядное устройство AIRLINE 12А импульсное ACH-12A-14
+            </p>
+            <p class="card__text">
+              Автоматическое импульсное зарядное устройство для
+              свинцово-кислотных аккумуляторов с номинальным напряжением 12В/16В
+              с возможностью регулировки зарядного тока обеспечивает заряд до
+              напряжения 14,8/16/19В.<br><br>Остаток на складе: 500 шт.
+            </p>
+          </div>
+        </div>
+
+        <div class="main__card">
+          <div class="card__left">
+            <img class="card__img" src="img/zarydki5.jpg" alt="" />
+            <p class="card__price">3695,50 руб</p>
+            <div
+              onclick="addToCart('Зарядное устройство AIRLINE 20А импульсное ACH-20A-15', '3695,50'); alert('Товар добавлен в корзину!')"
+              class="card__buy"
+            >
+              <p>Добавить в корзину</p>
+              <img src="img/order.png" alt="" />
+            </div>
+          </div>
+          <div class="card__right">
+            <p class="card__name">
+              Зарядное устройство AIRLINE 20А импульсное ACH-20A-15
+            </p>
+            <p class="card__text">
+              Автоматическое импульсное зарядное устройство для
+              свинцово-кислотных аккумуляторов с номинальным напряжением 12В/16В
+              с возможностью регулировки зарядного тока обеспечивает заряд до
+              напряжения 14,8/16/19В.<br><br>Остаток на складе: 500 шт.
+            </p>
+          </div>
+        </div>
+
+        <div class="main__card">
+          <div class="card__left">
+            <img class="card__img" src="img/zarydki6.jpg" alt="" />
+            <p class="card__price">3775,50 руб</p>
+            <div
+              onclick="addToCart('Зарядное устройство AIRLINE 14А импульсное ACH-14A-18', '3775,50'); alert('Товар добавлен в корзину!')"
+              class="card__buy"
+            >
+              <p>Добавить в корзину</p>
+              <img src="img/order.png" alt="" />
+            </div>
+          </div>
+          <div class="card__right">
+            <p class="card__name">
+              Зарядное устройство AIRLINE 14А импульсное ACH-14A-18
+            </p>
+            <p class="card__text">
+              Автоматическое импульсное зарядное устройство для
+              свинцово-кислотных аккумуляторов с номинальным напряжением 12В/16В
+              с возможностью регулировки зарядного тока обеспечивает заряд до
+              напряжения 14,8/16/19В.<br><br>Остаток на складе: 500 шт.
+            </p>
+          </div>
+        </div>
+
+        <div class="main__card">
+          <div class="card__left">
+            <img class="card__img" src="img/zarydki4.jpg" alt="" />
+            <p class="card__price">3002,00 руб</p>
+            <div
+              onclick="addToCart('Зарядное устройство AIRLINE 3,8А автоматическое электронное ACH-5A-10', '3002,00'); alert('Товар добавлен в корзину!')"
+              class="card__buy"
+            >
+              <p>Добавить в корзину</p>
+              <img src="img/order.png" alt="" />
+            </div>
+          </div>
+          <div class="card__right">
+            <p class="card__name">
+              Зарядное устройство AIRLINE 3,8А автоматическое электронное
+              ACH-5A-10
+            </p>
+            <p class="card__text">
+              Автоматическое зарядное устройство с микропроцессорным управлением
+              для свинцово-кислотных аккумуляторов всех типов (включая AGM, GEL,
+              Calcium) с номинальным напряжением 6/12В.<br><br>Остаток на складе: 500 шт.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+        <div id="on__top">
+            <img src="img/arrow.png" alt="">
+        </div>
+        <div class="footer__content">
+            <h1>Компания</h1>
+            <a href="rules.html">Партнерам (аренда, сотрудничество)</a>
+            <a href="rules.html#politika">Политика конфиденциальности</a>
+            <a href="rules.html#personal">Персональные данные</a>
+        </div>
+        <div class="footer__content">
+            <h1>Покупателям</h1>
+            <a href="rules.html#sposobi">Способы оплаты</a>
+            <a href="rules.html#dostavka">Доставка</a>
+            <a href="rules.html#obmen">Обмен, возврат, гарантия</a>
+        </div>
+        <div class="footer__content">
+            <h1>Юридическим лицам</h1>
+            <a href="rules.html#proverka">Проверка счета</a>
+            <a href="rules.html#svaz">Обратная связь</a>
+            <a href="karta.html">Карта сайта</a>
+        </div>
+        <div class="footer__content">
+            <h1>Контакты</h1>
+            <div class="footer__ss">
+                <a href="https://t.me/+mpO1ppCjLWM2OWQy" target="_blank"><img src="img/free-icon-telegram-2504941.png" alt=""></a>
+                <a href="https://vk.me/join/gzi/bYRgI41i5p3281lOpPqambCFXhz0QwA=" target="_blank"><img src="img/free-icon-vk-2504953.png" alt=""></a>
+                <a href="https://wa.me/+79055589003" target="_blank"><img src="img/free-icon-whatsapp-2504957.png" alt=""></a>             
+            </div>
+            <div>
+            <button id="colorToggleBtn">Версия для слабовидящих</button>
+
+                <script>
+                const button = document.getElementById('colorToggleBtn');
+                let isGreen = false;
+
+                button.addEventListener('click', () => {
+                    if (!isGreen) {
+                    document.body.style.color = '#17e621';
+                    isGreen = true;
+                    } else {
+                    document.body.style.color = '';
+                    isGreen = false;
+                    }
+                });
+            </script>
+        </div>
+        </div>
+        
+
+    </footer>
+  </body>
+</html>

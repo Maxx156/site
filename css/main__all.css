@@ -1,0 +1,173 @@
+.main__name {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+  width: 50%;
+  margin-top: 3.5%;
+  border-radius: 1.5vw;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: "BlackOpsOne";
+  margin-bottom: 3.5%;
+}
+
+#main__name__text {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.main__products {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  max-width: fit-content;
+  background-color: rgba(0, 0, 0, 0.25);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1.5vw;
+  border: 0.25vw dashed #ffffff;
+  align-content: flex-start;
+  padding-left: 0.25%;
+  padding-right: 0.25%;
+  padding-top: 0.25%;
+  padding-bottom: 0.25%;
+  justify-content: center;
+}
+
+.main__card {
+  display: flex;
+  height: 17.5vw;
+  width: 31vw;
+  border: solid 0.25vw #000000;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  margin-top: 0.25%;
+  margin-bottom: 0.25%;
+  border-radius: 1.25vw;
+  margin-left: 0.25vw;
+  margin-right: 0.25vw;
+  flex-direction: column;
+}
+
+.card__left {
+  display: flex;
+  width: 40%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__left .card__img {
+  transition: all 0.5s ease-in-out;
+}
+
+.card__left .card__img:hover {
+  transform: translate(50%, 50%) scale(2);
+}
+
+.card__right {
+  display: flex;
+  width: 60%;
+  height: 100%;
+  background-color: rgba(0, 255, 255, 0);
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.card__img {
+  display: flex;
+  width: 90%;
+  height: auto;
+  border-radius: 1vw;
+  border: 0.25vw solid rgb(0, 0, 0);
+  margin-top: 2.5%;
+}
+
+.card__price {
+  text-align: center;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.1vw;
+  background-color: #dddddd;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border: 0.15vw dashed rgb(0, 0, 0);
+  border-radius: 1.25vw;
+  margin-top: 7.5%;
+  margin-bottom: 0;
+}
+
+.card__buy {
+  display: flex;
+  margin-top: 7.5%;
+  margin-bottom: auto;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 10%;
+  background-color: #dddddd;
+  border-radius: 0.85vw;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border: 0.15vw solid rgb(0, 0, 0);
+  font-size: 0.95vw;
+  transition: all 0.25s ease-in-out;
+}
+
+.card__buy img {
+  width: 1.5vw;
+  margin: 0;
+}
+
+.card__buy:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  background-color: rgb(160, 255, 175);
+}
+
+.card__name {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.25vw;
+  display: flex;
+  font-weight: 900;
+  width: 97.5%;
+}
+
+.card__text {
+  display: flex;
+  padding: 0;
+  margin-top: 0;
+  font-size: 1vw;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  width: 97.5%;
+}
+
+#cart div {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 0.75vw;
+  background-color: rgb(255, 255, 255);
+  padding: 0.5vw;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  border-radius: 0.75vw;
+}
+
+.buy {
+  transition: all 0.25s ease-in-out;
+}
+
+.buy:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+}

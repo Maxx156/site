@@ -1,0 +1,410 @@
+.main__menu {
+  display: flex;
+  width: 75%;
+  padding-left: 12.5%;
+  padding-right: 12.5%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.25);
+  padding-top: 1.75%;
+  padding-bottom: 1.75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3.5%;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  flex-wrap: wrap;
+  border-top: #ffffff dashed 0.25vw;
+  border-bottom: #ffffff dashed 0.25vw;
+}
+
+.main__card {
+  display: flex;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.5s ease-in-out;
+  width: 17%;
+  height: 10vw;
+  border-radius: 1.5vw;
+  font-family: BlackOpsOne;
+  border: solid #ffffff 0.25vw;
+}
+
+.card__header {
+  width: 100%;
+  height: 2.5vw;
+  background-color: #6d8ea0;
+  border-top-left-radius: 1.2vw;
+  border-top-right-radius: 1.2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__air {
+  width: 100%;
+  height: 1.75vw;
+}
+
+#main__card__1 {
+  background-image: url(../img/catalog1.jpg);
+  font-size: 1.5vw;
+}
+
+#main__card__2 {
+  background-image: url(../img/catalog2.jpg);
+  font-size: 1.5vw;
+}
+
+#main__card__3 {
+  background-image: url(../img/catalog3.jpg);
+  font-size: 1.5vw;
+}
+
+#main__card__4 {
+  background-image: url(../img/catalog4.jpg);
+  font-size: 1.5vw;
+}
+
+#main__card__5 {
+  background-image: url(../img/catalog5.jpg);
+  font-size: 1.25vw;
+}
+
+#main__card__6 {
+  background-image: url(../img/catalog6.jpg);
+  font-size: 1.5vw;
+}
+
+#main__card__7 {
+  background-image: url(../img/catalog7.jpg);
+  font-size: 1.5vw;
+}
+
+#main__card__8 {
+  background-image: url(../img/catalog8.jpg);
+  font-size: 1.5vw;
+}
+
+#main__card__9 {
+  background-image: url(../img/catalog9.jpg);
+  font-size: 1vw;
+}
+
+#main__card__10 {
+  background-image: url(../img/catalog10.jpg);
+  font-size: 1.5vw;
+}
+
+#main__card__1:hover {
+  transform: scale(1.15) translate(0, -2.5%);
+}
+
+#main__card__2:hover {
+  transform: scale(1.15) translate(0, -2.5%);
+}
+
+#main__card__3:hover {
+  transform: scale(1.15) translate(0, -2.5%);
+}
+
+#main__card__4:hover {
+  transform: scale(1.15) translate(0, -2.5%);
+}
+
+#main__card__5:hover {
+  transform: scale(1.15) translate(0, -2.5%);
+}
+
+#main__card__6:hover {
+  transform: scale(1.15) translate(0, -2.5%);
+}
+
+#main__card__7:hover {
+  transform: scale(1.15) translate(0, -2.5%);
+}
+
+#main__card__8:hover {
+  transform: scale(1.15) translate(0, -2.5%);
+}
+
+#main__card__9:hover {
+  transform: scale(1.15) translate(0, -2.5%);
+}
+
+#main__card__10:hover {
+  transform: scale(1.15) translate(0, -2.5%);
+}
+
+.main__faq {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  background-color: #ffffff;
+  width: 85%;
+  border-radius: 1.5vw;
+  margin-top: 3.5%;
+  height: auto;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1vw;
+}
+
+#main__faq__text {
+  margin-right: auto;
+  width: 55%;
+  margin-left: 1.75%;
+  background-color: #dddddd;
+  padding: 2%;
+  border-radius: 1.5vw;
+}
+
+#main__faq__photo {
+  width: 30vw;
+  height: 20vw;
+  background-image: url(../img/vesta.png);
+  background-position: center;
+  background-size: cover;
+}
+
+#main__faq__photo:hover {
+  animation: car 1s ease-in-out;
+}
+
+@keyframes car {
+  0%,
+  100% {
+    background-image: url(../img/vesta.png);
+  }
+  50% {
+    background-image: url(../img/vesta_active.png);
+  }
+  60% {
+    background-image: url(../img/vesta.png);
+  }
+  70% {
+    background-image: url(../img/vesta_active.png);
+  }
+}
+
+.main__popular {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+  width: 50%;
+  margin-top: 3.5%;
+  border-radius: 1.5vw;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: "BlackOpsOne";
+  margin-bottom: 3.5%;
+}
+
+#main__popular__text {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.main__products {
+  width: 95%;
+  background-color: rgba(0, 0, 0, 0.25);
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+  padding: 1.5vw;
+  border: 0.25vw dashed #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1.5vw;
+  padding-bottom: 0;
+}
+
+.main__popular__card {
+  width: 49%;
+  height: auto;
+  background-color: #ffffff;
+  display: flex;
+  border-radius: 1.5vw;
+  margin-bottom: 1.5%;
+  border: solid 0.25vw #000000;
+}
+
+.main__popular__card__left {
+  margin: 0;
+  width: 30%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+  margin-left: 1.5%;
+}
+
+.main__popular__card__left .main__popular__card__photo {
+  transition: all 0.5s ease-in-out;
+}
+
+.main__popular__card__left .main__popular__card__photo:hover {
+  transform: translate(50%, 50%) scale(2);
+}
+
+#main__popular__card__1 {
+  margin-right: auto;
+}
+
+#main__popular__card__2 {
+  margin-left: auto;
+}
+
+.main__popular__card__photo {
+  border: 0.25vw solid rgb(0, 0, 0);
+  border-radius: 1.5vw;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: auto;
+}
+
+.main__buy__button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1vw;
+  padding-left: 1%;
+  background-color: #dddddd;
+  border: solid 0.15vw;
+  border-radius: 0.75vw;
+  width: 80%;
+  height: 2vw;
+  margin-top: 5%;
+  transition: all 0.25s ease-in-out;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main__buy__button:hover {
+  cursor: pointer;
+}
+
+.main__order__photo {
+  width: 10%;
+  height: auto;
+}
+
+.main__buy__button:hover {
+  transform: scale(1.15);
+  background-color: rgb(160, 255, 175);
+}
+
+.main__popular__card__right {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-left: 1.5%;
+  width: 64%;
+}
+
+.main__price {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #dddddd;
+  padding: 1.5%;
+  border: dashed 0.1vw;
+  border-radius: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  font-size: 1vw;
+}
+
+#main__popular__card {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main__reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main__reviews p {
+  font-family: "BlackOpsOne";
+  font-size: 2vw;
+  color: #000000;
+  background-color: #ffffff;
+  width: 30%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5vw;
+  border-radius: 1.5vw;
+}
+
+.main__reviews__block {
+  display: flex;
+  flex-direction: row;
+  width: 97.5%;
+  height: auto;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  background-color: rgba(0, 0, 0, 0.25);
+  margin-left: auto;
+  margin-right: auto;
+  border: 0.25vw dashed #ffffff;
+  border-radius: 1.5vw;
+  justify-content: center;
+  gap: 3vw;
+}
+
+.card__review {
+  width: 30%;
+  height: 12.5vw;
+  background-color: #ffffff;
+  border-radius: 1vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 1vw 0 1vw;
+}
+
+.name__card {
+  font-family: "BlackOpsOne";
+  font-size: 1.5vw;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  margin-top: 1vw;
+}
+
+.text__card {
+  font-size: 1.25vw;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.review__stars {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5vw;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.review__stars img {
+  width: 2.5vw;
+}

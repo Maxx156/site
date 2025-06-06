@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Карта сайта</title>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/html.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/main__all.css" />
+    <link rel="stylesheet" href="css/karta.css">
+    <script src="js/addtocart.js" defer></script>
+    <script src="js/on__top.js"></script>
+    <script src="js/counter.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+  </head>
+  <body>
+    <header style="background-color: #FFFFFF;">
+      <a href="index.html" id="logo">
+          <img src="img/logo.png" alt="" class="logo">
+      </a>
+      <a href="index.html">РусАвтоЗапчасти</a>
+      <a href="cart.html" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-decoration: none; color: black; font-size: 2.5vw; margin-left: 5vw; padding: 0.25vw; border: #000000 solid 0.15vw; border-radius: 1vw;"><img style="width: 2.5vw; margin-bottom: -0.3vw; margin-left: 0.25vw; margin-right: 0.25vw;" src="img/basket.png" alt=""></a>
+      <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; border: solid 0.15vw; width: min-content; height: 3.75vw; border-radius: 1vw; margin: 0 auto; gap: 0.25vw;
+      padding: 0 1vw;">
+          <img src="img/free-icon-eye-6200023.png" style="width: 2vw;" alt="">
+          <p id="counter" style="font-size: 2.5vw; font-family: BlackOpsOne;"></p>
+      </div>
+      
+      <div class="header__info">
+          <p>Интернет-магазин:</p>
+          <h2>+7 (903) 344-15-13</h2>
+          <p>часы работы с 9:00 до 22:00 (пн-пт)</p>
+      </div>
+  </header>
+    <main>
+      <a class="site" href="index.html"><p class="site__text">Главная</p>
+    <p class="site__name">Основная страница</p></a>
+      <a class="site" href="domkrati.html"><p class="site__text">Домкраты</p><p class="site__name">Страница домкратов</p></a>
+      <a class="site" href="friz.html"><p class="site__text">Антифризы</p><p class="site__name">Страница антифризов</p></a>
+      <a class="site" href="kompressori.html"><p class="site__text">Компрессоры</p><p class="site__name">Страница компрессоров</p></a>
+      <a class="site" href="ochistitel.html"><p class="site__text">Очистители</p><p class="site__name">Страница очистителей</p></a>
+      <a class="site" href="aroma.html"><p class="site__text">Ароматизаторы</p><p class="site__name">Страница ароматизаторов</p></a>
+      <a class="site" href="smazki.html"><p class="site__text">Смазки</p><p class="site__name">Страница смазок</p></a>
+      <a class="site" href="kraski.html"><p class="site__text">Краски</p><p class="site__name">Страница красок</p></a>
+      <a class="site" href="poliroli.html"><p class="site__text">Полироли</p><p class="site__name">Страница полиролей</p></a>
+      <a class="site" href="zarydki.html"><p class="site__text">Зарядки</p><p class="site__name">Страница зарядок</p></a>
+      <a class="site" href="instrymenti.html"><p class="site__text">Инструменты</p><p class="site__name">Страница инструментов</p></a>
+      <a class="site" href="cart.html"><p class="site__text">Корзина</p><p class="site__name">Ваши товары</p></a>
+    </main>
+    <footer>
+        <div id="on__top">
+            <img src="img/arrow.png" alt="">
+        </div>
+        <div class="footer__content">
+            <h1>Компания</h1>
+            <a href="rules.html">Партнерам (аренда, сотрудничество)</a>
+            <a href="rules.html#politika">Политика конфиденциальности</a>
+            <a href="rules.html#personal">Персональные данные</a>
+        </div>
+        <div class="footer__content">
+            <h1>Покупателям</h1>
+            <a href="rules.html#sposobi">Способы оплаты</a>
+            <a href="rules.html#dostavka">Доставка</a>
+            <a href="rules.html#obmen">Обмен, возврат, гарантия</a>
+        </div>
+        <div class="footer__content">
+            <h1>Юридическим лицам</h1>
+            <a href="rules.html#proverka">Проверка счета</a>
+            <a href="rules.html#svaz">Обратная связь</a>
+            <a href="karta.html">Карта сайта</a>
+        </div>
+        <div class="footer__content">
+            <h1>Контакты</h1>
+            <div class="footer__ss">
+                <a href="https://t.me/+mpO1ppCjLWM2OWQy" target="_blank"><img src="img/free-icon-telegram-2504941.png" alt=""></a>
+                <a href="https://vk.me/join/gzi/bYRgI41i5p3281lOpPqambCFXhz0QwA=" target="_blank"><img src="img/free-icon-vk-2504953.png" alt=""></a>
+                <a href="https://wa.me/+79055589003" target="_blank"><img src="img/free-icon-whatsapp-2504957.png" alt=""></a>             
+            </div>
+            <div>
+            <button id="colorToggleBtn">Версия для слабовидящих</button>
+
+                <script>
+                const button = document.getElementById('colorToggleBtn');
+                let isGreen = false;
+
+                button.addEventListener('click', () => {
+                    if (!isGreen) {
+                    document.body.style.color = '#17e621';
+                    isGreen = true;
+                    } else {
+                    document.body.style.color = '';
+                    isGreen = false;
+                    }
+                });
+            </script>
+        </div>
+        </div>
+        
+
+    </footer>
+  </body>
+</html>

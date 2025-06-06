@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="css/html.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <script src="js/links.js" defer></script>
+    <script src="js/addtocart.js" defer></script>
+    <script src="js/on__top.js" defer></script>
+    <script src="js/counter.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+  </head>
+
+  <body>
+    <header style="background-color: #ffffff">
+      <a href="index.html" id="logo">
+        <img src="img/logo.png" alt="" class="logo" />
+      </a>
+      <a href="index.html">РусАвтоЗапчасти</a>
+      <a
+        href="cart.html"
+        style="
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+            sans-serif;
+          text-decoration: none;
+          color: black;
+          font-size: 2.5vw;
+          margin-left: 5vw;
+          padding: 0.25vw;
+          border: #000000 solid 0.15vw;
+          border-radius: 1vw;
+        "
+        ><img
+          style="
+            width: 2.5vw;
+            margin-bottom: -0.3vw;
+            margin-left: 0.25vw;
+            margin-right: 0.25vw;
+          "
+          src="img/basket.png"
+          alt=""
+      /></a>
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          border: solid 0.15vw;
+          width: min-content;
+          height: 3.75vw;
+          border-radius: 1vw;
+          margin: 0 auto;
+          gap: 0.25vw;
+          padding: 0 1vw;
+        "
+      >
+        <img src="img/free-icon-eye-6200023.png" style="width: 2vw" alt="" />
+        <p id="counter" style="font-size: 2.5vw; font-family: BlackOpsOne"></p>
+      </div>
+
+      <div class="header__info">
+        <p>Интернет-магазин:</p>
+        <h2>+7 (903) 344-15-13</h2>
+        <p>часы работы с 9:00 до 22:00 (пн-пт)</p>
+      </div>
+    </header>
+    <main>
+      <div class="main__menu">
+        <div class="main__card" id="main__card__1">
+          <div class="card__header">
+            <p>Домкраты</p>
+          </div>
+        </div>
+        <div class="main__card" id="main__card__2">
+          <div class="card__header">
+            <p>Антифризы</p>
+          </div>
+        </div>
+        <div class="main__card" id="main__card__3">
+          <div class="card__header">
+            <p>Комрессоры</p>
+          </div>
+        </div>
+        <div class="main__card" id="main__card__4">
+          <div class="card__header">
+            <p>Очистители</p>
+          </div>
+        </div>
+        <div class="main__card" id="main__card__5">
+          <div class="card__header">
+            <p>Ароматизаторы</p>
+          </div>
+        </div>
+        <div class="main__air"></div>
+
+        <div class="main__card" id="main__card__6">
+          <div class="card__header">
+            <p>Смазки</p>
+          </div>
+        </div>
+        <div class="main__card" id="main__card__7">
+          <div class="card__header">
+            <p>Краски</p>
+          </div>
+        </div>
+        <div class="main__card" id="main__card__8">
+          <div class="card__header">
+            <p>Полироли</p>
+          </div>
+        </div>
+        <div class="main__card" id="main__card__9">
+          <div class="card__header">
+            <p>Зарядные устройства</p>
+          </div>
+        </div>
+        <div class="main__card" id="main__card__10">
+          <div class="card__header">
+            <p>Инструменты</p>
+          </div>
+        </div>
+      </div>
+      <div class="main__faq">
+        <p id="main__faq__text">
+          &emsp;&emsp;Добро пожаловать на наш сайт, посвященный автозапчастям
+          для автомобилей марки ВАЗ! Мы рады вас приветствовать в мире
+          качественных и доступных комплектующих, которые помогут вам
+          поддерживать ваш автомобиль в наилучшем состоянии.
+          <br /><br />
+          &emsp;&emsp;Наша компания специализируется на продаже запчастей для
+          автомобилей ВАЗ – от классических моделей до самых современных. Мы
+          понимаем, как важно для вас иметь надежные детали, которые прослужат
+          долгие годы, и поэтому тщательно отбираем продукцию от проверенных
+          производителей. У нас вы найдете широкий ассортимент как оригинальных,
+          так и качественных аналогов запчастей.
+          <br /><br />
+          &emsp;&emsp;На нашем сайте мы стараемся создать максимально удобные
+          условия для шопинга. Вы можете легко и быстро искать нужные детали по
+          каталогу, используя удобные фильтры. Для вашего удобства информация о
+          каждом товаре сопровождается детальными описаниями и фотографиями, что
+          позволяет вам принимать обоснованные решения при выборе.
+        </p>
+        <div id="main__faq__photo"></div>
+      </div>
+      <div class="main__popular">
+        <p id="main__popular__text">Популярные товары</p>
+      </div>
+      <div class="main__products">
+        <div class="main__popular__card" id="main__popular__card__1">
+          <div class="main__popular__card__left">
+            <img
+              src="img/popylar1.jpg"
+              alt=""
+              class="main__popular__card__photo"
+            />
+            <a
+              onclick="addToCart('Пружина подвески 2121 213 ФОБОС задняя переменный шаг 78611 [упаковка 2 шт.]', '3382,00'); alert('Товар добавлен в корзину!')"
+              class="main__buy__button"
+            >
+              <p>Добавить в корзину</p>
+              <img src="img/order.png" alt="" class="main__order__photo" />
+            </a>
+            <p class="main__price">3382,00 руб</p>
+          </div>
+          <div class="main__popular__card__right">
+            <p
+              style="
+                font-size: 0.75vw;
+                font-weight: bold;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 2.75%;
+              "
+            >
+              Пружина подвески 2121 213 ФОБОС задняя переменный шаг 78611
+              [упаковка 2 шт.]
+            </p>
+            <p style="font-size: 1vw">
+              &emsp;Серия «ПРОГРЕССИВНЫЕ» с переменным шагом. Эти пружины
+              открывают широкую гамму продукции «ФОБОС» для тюнинга подвески.
+              Пружины данной серии являются технической разработкой инженеров и
+              конструкторов фирмы. Разработка подтверждена патентом № 42796 от
+              20.03.2004. Пружины имеют прогрессивную характеристику жесткости.
+            </p>
+            <p style="font-size: 1.25vw">Остаток на складе: 500 шт.</p>
+          </div>
+        </div>
+        <div class="main__popular__card" id="main__popular__card__2">
+          <div class="main__popular__card__left">
+            <img
+              src="img/popylar2.jpg"
+              alt=""
+              class="main__popular__card__photo"
+            />
+            <a
+              onclick="addToCart('Автоодеяло Garde №1 130х80см G13080', '1501,00'); alert('Товар добавлен в корзину!')"
+              class="main__buy__button"
+            >
+              <p>Добавить в корзину</p>
+              <img src="img/order.png" alt="" class="main__order__photo" />
+            </a>
+            <p class="main__price">1501,00 руб</p>
+          </div>
+          <div class="main__popular__card__right">
+            <p
+              style="
+                font-size: 1vw;
+                font-weight: bold;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 2.5%;
+              "
+            >
+              Автоодеяло Garde №1 130х80см G13080
+            </p>
+            <p style="font-size: 1vw">
+              &emsp;Вскрывать/доставать из упаковки/работать только в перчатках!
+              Автоодеяло Garde — полотно, которое сохраняет положительную
+              температуру двигателя, ускоряет процесс прогревания автомобиля в
+              зимний период времени, в сочетании со звукоизоляцией моторного
+              отсека. Утеплитель подкапотного пространства используется только в
+              холодное время года. В теплое время года его необходимо извлечь и
+              хранить до следующего зимнего сезона. Рекомендации по установке:
+              открыть капот автомобиля; положить утеплитель на двигатель;
+              закрыть капот.
+            </p>
+            <p style="font-size: 1.25vw">Остаток на складе: 500 шт.</p>
+          </div>
+        </div>
+        <div class="main__popular__card" id="main__popular__card__1">
+          <div class="main__popular__card__left">
+            <img
+              src="img/popylar3.jpg"
+              alt=""
+              class="main__popular__card__photo"
+            />
+            <a
+              onclick="addToCart('Размораживатель дизельного топлива ASTROhim AC193 1л на 200 литров топлива', '802,75'); alert('Товар добавлен в корзину!')"
+              class="main__buy__button"
+            >
+              <p>Добавить в корзину</p>
+              <img src="img/order.png" alt="" class="main__order__photo" />
+            </a>
+            <p class="main__price">802,75 руб</p>
+          </div>
+          <div class="main__popular__card__right">
+            <p
+              style="
+                font-size: 0.75vw;
+                font-weight: bold;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 2.75%;
+              "
+            >
+              Размораживатель дизельного топлива ASTROhim AC193 1л на 200 литров
+              топлива
+            </p>
+            <p style="font-size: 1vw">
+              &emsp;Высокоэффективный состав для экстренного размораживания
+              дизельного топлива. Предназначен для восстановления текучести
+              топлива и ликвидации кристаллов парафина при резком понижении
+              температуры окружающей среды, в случае если это произошло в пути и
+              в баке залито летнее дизельное топливо.
+            </p>
+            <p style="font-size: 1.25vw">Остаток на складе: 500 шт.</p>
+          </div>
+        </div>
+        <div class="main__popular__card" id="main__popular__card__2">
+          <div class="main__popular__card__left">
+            <img
+              src="img/popylar5.jpg"
+              alt=""
+              class="main__popular__card__photo"
+            />
+            <a
+              onclick="addToCart('Антифриз MAXHIM G12 1кг концентрат желтый MHY112C', '399,00'); alert('Товар добавлен в корзину!')"
+              class="main__buy__button"
+            >
+              <p>Добавить в корзину</p>
+              <img src="img/order.png" alt="" class="main__order__photo" />
+            </a>
+            <p class="main__price">399,00 руб</p>
+          </div>
+          <div class="main__popular__card__right">
+            <p
+              style="
+                font-size: 1vw;
+                font-weight: bold;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 2.5%;
+              "
+            >
+              Антифриз MAXHIM G12 1кг концентрат желтый MHY112C
+            </p>
+            <p style="font-size: 1vw">
+              &emsp;G12+ Защита от: замерзания до* -25°C и закипания до** 116°C
+              при соотношении концентрата и воды 40/60; замерзания до* -37°C и
+              закипания до** 129°C при соотношении концентрата и воды 50/50;
+              замерзания до* -52°C и закипания до** 132°C при соотношении
+              концентрата и воды 60/40. *Указана температура начала
+              кристаллизации раствора.
+            </p>
+            <p style="font-size: 1.25vw">Остаток на складе: 500 шт.</p>
+          </div>
+        </div>
+        <div class="main__popular__card" id="main__popular__card__1">
+          <div class="main__popular__card__left">
+            <img
+              src="img/popylar6.jpg"
+              alt=""
+              class="main__popular__card__photo"
+            />
+            <a
+              onclick="addToCart('Зарядное устройство АВТОЭЛЕКТРИКА T-1021 с фонарем', '3828,50'); alert('Товар добавлен в корзину!')"
+              class="main__buy__button"
+            >
+              <p>Добавить в корзину</p>
+              <img src="img/order.png" alt="" class="main__order__photo" />
+            </a>
+            <p class="main__price">3828,50 руб</p>
+          </div>
+          <div class="main__popular__card__right">
+            <p
+              style="
+                font-size: 1vw;
+                font-weight: bold;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 2.75%;
+              "
+            >
+              Зарядное устройство АВТОЭЛЕКТРИКА T-1021 с фонарем
+            </p>
+            <p style="font-size: 1vw">
+              &emsp;Зарядное устройство Назначение -зарядка всех типов
+              аккумуляторных батарей емкостью от 3 Ач до 80 Ач, в т.ч. глубоко
+              разряженных; зарядка АКБ в составе транспортного средства;
+              автоматическое управление зарядкой батареи; ручное управление
+              зарядкой с плавной регулировкой; компенсация саморазряда АКБ в
+              режиме хранения; освещение встроенным фонарем в темное время суток
+              Использование - для личного пользования владельцами транспортных
+              средств.
+            </p>
+            <p style="font-size: 1.25vw">Остаток на складе: 500 шт.</p>
+          </div>
+        </div>
+        <div class="main__popular__card" id="main__popular__card__2">
+          <div class="main__popular__card__left">
+            <img
+              src="img/popylar7.jpg"
+              alt=""
+              class="main__popular__card__photo"
+            />
+            <a
+              onclick="addToCart('Термостат LADA X-Ray Vesta 15- 2190 Granta 14- доп штуцер ал корпус BAUTLER BTL-0091T', '2033,00'); alert('Товар добавлен в корзину!')"
+              class="main__buy__button"
+            >
+              <p>Добавить в корзину</p>
+              <img src="img/order.png" alt="" class="main__order__photo" />
+            </a>
+            <p class="main__price">2033,00 руб</p>
+          </div>
+          <div class="main__popular__card__right">
+            <p
+              style="
+                font-size: 0.75vw;
+                font-weight: bold;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 2.5%;
+              "
+            >
+              Термостат LADA X-Ray Vesta 15- 2190 Granta 14- доп штуцер ал
+              корпус BAUTLER BTL-0091T
+            </p>
+            <p style="font-size: 1vw">
+              &emsp;Datsun on-DO (14-)mi-DO (15-) Lada Granta (10-)Kalina II
+              (13-)Vesta (15-)X-Ray (15-)
+            </p>
+            <p style="font-size: 1.25vw">Остаток на складе: 500 шт.</p>
+          </div>
+        </div>
+        <div class="main__popular__card" id="main__popular__card__1">
+          <div class="main__popular__card__left">
+            <img
+              src="img/popylar8.jpg"
+              alt=""
+              class="main__popular__card__photo"
+            />
+            <a
+              onclick="addToCart('Колодки тормозные KIA RIO III KIA SOUL HYUNDAI SOLARIS TUCSON задние BESTPARTS BP001328', '570,00'); alert('Товар добавлен в корзину!')"
+              class="main__buy__button"
+            >
+              <p>Добавить в корзину</p>
+              <img src="img/order.png" alt="" class="main__order__photo" />
+            </a>
+            <p class="main__price">570,00 руб</p>
+          </div>
+          <div class="main__popular__card__right">
+            <p
+              style="
+                font-size: 0.75vw;
+                font-weight: bold;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 2.75%;
+              "
+            >
+              Колодки тормозные KIA RIO III KIA SOUL HYUNDAI SOLARIS TUCSON
+              задние BESTPARTS BP001328
+            </p>
+            <p style="font-size: 1vw">
+              &emsp;Колодки тормозные дисковые задние. Особенности конструкции:
+              без паза, без пружин, без отверстий, не предусмотрено под датчик
+              износа, без противоскрипных пластин, без установочных болтов.
+              Применяемость: KIA RIO III, KIA SOUL, HYUNDAI TUCSON, HYUNDAI NF
+              V, HYUNDAI i40, HYUNDAI SOLARIS, HYUNDAI SOLARIS IV, SSANGYONG
+              ACTYON II, SSANGYONG ACTYON SPORTS I, SSANGYONG ACTYON SPORTS II,
+              SSANGYONG KORANDO.
+            </p>
+            <p style="font-size: 1.25vw">Остаток на складе: 500 шт.</p>
+          </div>
+        </div>
+        <div class="main__popular__card" id="main__popular__card__2">
+          <div class="main__popular__card__left">
+            <img
+              src="img/popylar9.jpg"
+              alt=""
+              class="main__popular__card__photo"
+            />
+            <a
+              onclick="addToCart('Шина Torero MP30 185/65 R15 92Т XL зима шип', '5020,00'); alert('Товар добавлен в корзину!')"
+              class="main__buy__button"
+            >
+              <p>Добавить в корзину</p>
+              <img src="img/order.png" alt="" class="main__order__photo" />
+            </a>
+            <p class="main__price">5020,00 руб</p>
+          </div>
+          <div class="main__popular__card__right">
+            <p
+              style="
+                font-size: 1vw;
+                font-weight: bold;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 2.5%;
+              "
+            >
+              Шина Torero MP30 185/65 R15 92Т XL зима шип
+            </p>
+            <p style="font-size: 1vw">
+              &emsp;Производитель Torero (РОССИЯ) Группа Continental Модель
+              Matador MP-30 Размер 185/65 R15 Тип автомобиля Легковые автомобили
+              Сезонность Зимние Шипы Есть Усиление XL Производство РОССИЯ
+            </p>
+            <p style="font-size: 1.25vw">Остаток на складе: 500 шт.</p>
+          </div>
+        </div>
+        <div class="main__popular__card" id="main__popular__card">
+          <div class="main__popular__card__left">
+            <img
+              src="img/popylar10.jpg"
+              alt=""
+              class="main__popular__card__photo"
+            />
+            <a
+              onclick="addToCart('Штанги реактивные 2121,21213,2123 Chevy Niva BESTPARTS 5шт BP003002', '2517,50'); alert('Товар добавлен в корзину!')"
+              class="main__buy__button"
+            >
+              <p>Добавить в корзину</p>
+              <img src="img/order.png" alt="" class="main__order__photo" />
+            </a>
+            <p class="main__price">2517,50 руб</p>
+          </div>
+
+          <div class="main__popular__card__right">
+            <p
+              style="
+                font-size: 0.75vw;
+                font-weight: bold;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 2.75%;
+              "
+            >
+              Штанги реактивные 2121,21213,2123 Chevy Niva BESTPARTS 5шт
+              BP003002
+            </p>
+            <p style="font-size: 1vw">
+              &emsp;Штанга реактивная устраняет колебания кузова и обеспечивает
+              устойчивость кузова автомобиля. Штанга реактивная имеет сертификат
+              соответствия требованиям технического регламента Таможенного Союза
+              ЕАС. 21213-2919000-00 ТУ 29.32.30-001-44441426-2020
+            </p>
+            <p style="font-size: 1.25vw">Остаток на складе: 500 шт.</p>
+          </div>
+        </div>
+      </div>
+      <div class="main__reviews">
+        <p>Отзывы</p>
+        <div class="main__reviews__block">
+          <div class="card__review">
+            <div class="name__card">Motul-garage</div>
+            <div class="text__card">
+              Отличный сервис! Все быстро и качественно. Очень доволен
+              результатом. Рекомендую!
+            </div>
+            <div class="review__stars">
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+            </div>
+          </div>
+          <div class="card__review">
+            <div class="name__card">КарТехник М Техцентр</div>
+            <div class="text__card">
+              Очень доволен! Всё прошло отлично, спасибо за качественную работу!
+            </div>
+            <div class="review__stars">
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+            </div>
+          </div>
+          <div class="card__review">
+            <div class="name__card">РОЛЬФ Сервис</div>
+            <div class="text__card">
+              Долго ждал доставку, но товар пришел в целости и сохранности. В
+              целом, остался доволен.
+            </div>
+            <div class="review__stars">
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/star.png" alt="" />
+              <img src="img/rating.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div id="on__top">
+        <img src="img/arrow.png" alt="" />
+      </div>
+      <div class="footer__content">
+        <h1>Компания</h1>
+        <a href="rules.html">Партнерам (аренда, сотрудничество)</a>
+        <a href="rules.html#politika">Политика конфиденциальности</a>
+        <a href="rules.html#personal">Персональные данные</a>
+      </div>
+      <div class="footer__content">
+        <h1>Покупателям</h1>
+        <a href="rules.html#sposobi">Способы оплаты</a>
+        <a href="rules.html#dostavka">Доставка</a>
+        <a href="rules.html#obmen">Обмен, возврат, гарантия</a>
+      </div>
+      <div class="footer__content">
+        <h1>Юридическим лицам</h1>
+        <a href="rules.html#proverka">Проверка счета</a>
+        <a href="rules.html#svaz">Обратная связь</a>
+        <a href="karta.html">Карта сайта</a>
+      </div>
+      <div class="footer__content">
+        <h1>Контакты</h1>
+        <div class="footer__ss">
+          <a href="https://t.me/+mpO1ppCjLWM2OWQy" target="_blank"
+            ><img src="img/free-icon-telegram-2504941.png" alt=""
+          /></a>
+          <a
+            href="https://vk.me/join/gzi/bYRgI41i5p3281lOpPqambCFXhz0QwA="
+            target="_blank"
+            ><img src="img/free-icon-vk-2504953.png" alt=""
+          /></a>
+          <a href="https://wa.me/+79055589003" target="_blank"
+            ><img src="img/free-icon-whatsapp-2504957.png" alt=""
+          /></a>
+        </div>
+        <div>
+          <button id="colorToggleBtn">Версия для слабовидящих</button>
+
+          <script>
+            const button = document.getElementById("colorToggleBtn");
+            let isGreen = false;
+
+            button.addEventListener("click", () => {
+              if (!isGreen) {
+                document.body.style.color = "#17e621";
+                isGreen = true;
+              } else {
+                document.body.style.color = "";
+                isGreen = false;
+              }
+            });
+          </script>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

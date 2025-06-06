@@ -1,0 +1,65 @@
+header {
+    width: 90%;
+    height: 6vw;
+    background-color: #AFA98D;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-bottom-left-radius: 3vw;
+    border-bottom-right-radius: 3vw;
+}
+
+header a {
+    font-family: BlackOpsOne;
+    font-size: 3.5vw;
+    margin-left: 3vw;
+    text-decoration: none;
+    color: #000000;
+}
+
+h2 {
+    font-size: 2vw;
+}
+
+.logo {
+    width: 6vw;
+    float: left;
+    margin-right: auto;
+}
+
+#logo {
+    transition: all 0.5s ease-in-out;
+}
+
+#logo:hover {
+    animation: pizdec 2s 1;
+}
+
+.header__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+}
+
+.header__info p, h2 {
+    font-family: "BlackOpsOne";
+    font-size: 2vw;
+    margin-bottom: -0.5%;
+    margin-top: -0.5%;
+}
+
+.header__info p {
+    font-size: 1vw;
+}
+
+
+@keyframes pizdec {
+    10% { transform: scale(1.25); }
+  30% { transform: rotate(20deg); }
+  45% { transform:translateX(-50vw); }
+}
